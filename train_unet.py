@@ -22,7 +22,7 @@ from tqdm  import tqdm
 
 
 
-from A import Del_FPN_F,Del_CBAM,FPNUNetV3_CBAM_Residual_SUM
+from A import Del_FPN_F,Del_CBAM,FPNUNetV3_CBAM_Residual_SUM,FPNUNetV3_CoordAttention_1
 import datetime
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
@@ -53,7 +53,7 @@ val_loader = DataLoader(val_data, batch_size=32, drop_last=True, shuffle=False)
 model = FPNUNetV3_CBAM_Residual_SUM()
 model = model.to(device) 
 model_name = model.__class__.__name__
-timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%d_%M")
+timestamp = datetime.datetime.now().strftime("%Y%d%m%d_%H%d_%M")
 log_dir = f"results/{model_name}_{timestamp}"
 os.makedirs(log_dir, exist_ok=True)
 

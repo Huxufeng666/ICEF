@@ -2,3 +2,8 @@ output
 results
 __pycache__
 1
+*.pth
+*.png
+*.txt
+*.csv
+*.sh

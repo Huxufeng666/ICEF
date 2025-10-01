@@ -1654,8 +1654,6 @@ class FPNUNetV3_CBAM_AttnGate(nn.Module):
 
 
 
-
-
 class ResidualConvBlock(nn.Module):
     def __init__(self, in_ch, out_ch):
         super().__init__()
